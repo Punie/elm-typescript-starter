@@ -1,0 +1,51 @@
+sudo: false
+
+language: node_js
+
+notifications:
+  email: false
+
+env:
+  - YARN_VERSION=1.13.0
+
+cache:
+  yarn: true
+  directories:
+    - sysconfcpus
+
+before_install:
+  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version $YARN_VERSION
+  - export PATH="$HOME/.yarn/bin:$PATH"
+
+install:
+  - yarn
+  # Faster compile on Travis.
+  - | # courtesy of @rtfeldman - see https://github.com/rtfeldman/node-test-runner#travis-ci
+    if [ ! -d sysconfcpus/bin ];
+    then
+      git clone https://github.com/obmarg/libsysconfcpus.git;
+      cd libsysconfcpus;
+      ./configure --prefix=$TRAVIS_BUILD_DIR/sysconfcpus;
+      make && make install;
+      cd ..;
+    fi
+
+script:
+  - yarn lint-elm
+  - yarn lint-analyse
+  - yarn lint-ts
+  - $TRAVIS_BUILD_DIR/sysconfcpus/bin/sysconfcpus -n 1 yarn test
+  - yarn build
+
+# deploy:
+#   - provider: script
+#     script: bash scripts/deploy.sh production
+#     skip_cleanup: true
+#     on:
+#       tags: true
+#   - provider: script
+#     script: bash scripts/deploy.sh staging
+#     skip_cleanup: true
+#     on:
+#       branch: master
