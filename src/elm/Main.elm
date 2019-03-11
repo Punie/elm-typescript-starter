@@ -45,12 +45,12 @@ type Msg
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
-update (Received msg) model =
+update msg model =
     case msg of
-        Tick n ->
+        Received (Tick n) ->
             ( model, Js.store n )
 
-        NoOp ->
+        Received NoOp ->
             ( model, Cmd.none )
 
 

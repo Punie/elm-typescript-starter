@@ -6,12 +6,12 @@ port module Js exposing
 {-|
 
 
-# From JS
+# To JS
 
 @docs log, store
 
 
-# To JS
+# From JS
 
 @docs Message, receive
 
@@ -22,7 +22,7 @@ import Json.Encode as Encode exposing (Value)
 
 
 
--- Public JS API
+-- To JS
 
 
 {-| Ask JS to console.log a String
@@ -41,6 +41,10 @@ store n =
         |> command
 
 
+
+-- From JS
+
+
 {-| The type of messages coming from JS with their associated values.
 -}
 type Message
@@ -53,9 +57,10 @@ type Message
     type Msg
         = Received Js.Message
 
-    update (Received jsMsg) model =
-        case jsMsg of
-            -- This is where you interpret the messages coming from JS
+    update msg model =
+        case msg of
+            Received jsMsg ->
+                -- interpret jsMsg here
 
     subscriptions _ =
         Js.receive Received
