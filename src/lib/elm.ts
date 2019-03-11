@@ -17,17 +17,19 @@ export function dispatch(action: Action) {
   }
 }
 
+export function sendTick(app: App, tick: number) {
+  const tickMsg: TickMessage = {
+    kind: 'tick',
+    value: tick
+  };
+
+  app.ports.notification.send(tickMsg);
+}
+
 function log(value: string) {
   console.log(value);
 }
 
 function store(value: number) {
   console.log(`Storing value: ${value}`);
-}
-
-export function tick(n: number): TickMessage {
-  return {
-    kind: 'tick',
-    value: n
-  };
 }

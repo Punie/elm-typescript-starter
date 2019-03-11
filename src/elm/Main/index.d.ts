@@ -84,10 +84,10 @@ export interface Ports {
   notification: Sub<Message>;
 }
 
-/** */
+/** Type of commands coming from Elm to perform on the JS side. */
 export type Action = LogAction | StoreAction;
 
-/** */
+/** Type of messages to send from JS to notify the Elm side. */
 export type Message = TickMessage;
 
 /** API for incoming ports from Elm. */
