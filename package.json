@@ -30,7 +30,7 @@
   },
   "scripts": {
     "serve": "parcel src/static/index.html -d build-dev --cache-dir build-dev/.cache --port 1234 --open",
-    "build": "parcel build src/static/index.html -d build --detailed-report --no-source-maps --no-cache",
+    "build": "parcel build src/static/index.html -d build --detailed-report --no-source-maps --no-cache --experimental-scope-hoisting",
     "lint-analyse": "elm-analyse --elm-format-path ./node_modules/.bin/elm-format",
     "lint-elm": "elm-format --validate src tests",
     "lint-ts": "tslint --project tsconfig.json",
