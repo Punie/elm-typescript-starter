@@ -1,7 +1,3 @@
 {
-  "extends": "tslint-config-airbnb",
-  "rules": {
-    "trailing-comma": false,
-    "ter-arrow-parens": false
-  }
+  "extends": "tslint-config-airbnb"
 }
