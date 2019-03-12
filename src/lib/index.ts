@@ -13,6 +13,6 @@ const seconds = interval(1000);
 seconds
   .pipe(
     map(n => n * 10),
-    filter(n => n % 100 === 0)
+    filter(n => n % 100 === 0),
   )
   .subscribe(n => sendTick(app, n));
