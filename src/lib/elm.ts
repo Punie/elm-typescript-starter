@@ -20,7 +20,7 @@ export function dispatch(action: Action) {
 export function sendTick(app: App, tick: number) {
   const tickMsg: TickMessage = {
     kind: 'tick',
-    value: tick
+    value: tick,
   };
 
   app.ports.notification.send(tickMsg);
