@@ -40,7 +40,9 @@
     "test": "elm-test --compiler ./node_modules/.bin/elm tests/Elm/**/*.elm",
     "tdd": "elm-test --compiler ./node_modules/.bin/elm tests/Elm/**/*.elm --watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "rxjs": "^6.4.0"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.5.0",
     "@typescript-eslint/parser": "^2.5.0",
