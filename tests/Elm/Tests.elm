@@ -1,7 +1,8 @@
 module Elm.Tests exposing (suite)
 
 import Expect
-import Test exposing (Test, describe, test)
+import Fuzz exposing (string)
+import Test exposing (Test, describe, fuzz, test)
 
 
 suite : Test
@@ -13,4 +14,10 @@ suite =
         , test "This one should now pass" <|
             \_ ->
                 Expect.true "True should not be false." (not False)
+        , fuzz string "restores the original string if you run it again" <|
+            \randomlyGeneratedString ->
+                randomlyGeneratedString
+                    |> String.reverse
+                    |> String.reverse
+                    |> Expect.equal randomlyGeneratedString
         ]
