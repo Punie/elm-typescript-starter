@@ -6,7 +6,7 @@ notifications:
   email: false
 
 env:
-  - YARN_VERSION=1.13.0
+  - YARN_VERSION=1.15.2
 
 cache:
   yarn: true
