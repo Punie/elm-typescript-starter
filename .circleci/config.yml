@@ -9,9 +9,12 @@ jobs:
       - attach_workspace:
           at: ~/rollinmh-client
       - restore_cache:
-          name: Restore Cache
+          name: Restore Yarn Package Cache
           keys:
             - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - restore_cache:
+          name: Restore Elm Package Cache
+          keys:
             - elm-packages-{{ .Branch }}-{{ checksum "elm.json" }}
       - run:
           name: Install Dependencies
