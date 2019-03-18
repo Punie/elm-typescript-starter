@@ -1,29 +1,19 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/node:11.11.0
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
 
     working_directory: ~/repo
 
     steps:
       - checkout
 
-      # Download and cache dependencies
       - restore_cache:
-          name: Restore Yarn Package Cache
+          name: Restore Cache
           keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
+            - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - elm-packages-{{ .Branch }}-{{ checksum "elm.json" }}
 
       - run:
           name: Install Dependencies
@@ -31,17 +21,31 @@ jobs:
 
       - save_cache:
           name: Save Yarn Package Cache
-          key: yarn-packages-{{ checksum "yarn.lock" }}
+          key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
 
-      # run lints!
-      - run: yarn lint-elm
-      - run: yarn lint-analyse
-      - run: yarn lint-ts
+      - run:
+          name: Linters
+          command: |
+            yarn lint-elm
+            yarn lint-analyse
+            yarn lint-ts
 
       # run tests!
-      - run: yarn test
+      - run:
+          name: Tests
+          command: yarn test
 
       # run build!
-      - run: yarn build
+      - run:
+          name: Build
+          command: yarn build
+
+      - save_cache:
+          name: Save Elm Package Cache
+          key: elm-packages-{{ .Branch }}-{{ checksum "elm.json" }}
+          paths:
+            - ~/.elm
+
+
