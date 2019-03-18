@@ -3,41 +3,32 @@ jobs:
   build:
     docker:
       - image: circleci/node:11.11.0
-
     working_directory: ~/rollinmh-client
-
     steps:
       - checkout
-
       - attach_workspace:
           at: ~/rollinmh-client
-
       - restore_cache:
           name: Restore Cache
           keys:
             - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
             - elm-packages-{{ .Branch }}-{{ checksum "elm.json" }}
-
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
-
       - save_cache:
           name: Save Yarn Package Cache
           key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-
       - run:
           name: Build
           command: yarn build
-
       - save_cache:
           name: Save Elm Package Cache
           key: elm-packages-{{ .Branch }}-{{ checksum "elm.json" }}
           paths:
             - ~/.elm
-
       - persist_to_workspace:
           root: .
           paths:
@@ -47,15 +38,11 @@ jobs:
   test:
     docker:
       - image: circleci/node:11.11.0
-
     working_directory: ~/rollinmh-client
-
     steps:
       - checkout
-
       - attach_workspace:
           at: ~/rollinmh-client
-
       - run:
           name: Test
           command: yarn test
@@ -63,15 +50,11 @@ jobs:
   lint:
     docker:
       - image: circleci/node:11.11.0
-
     working_directory: ~/rollinmh-client
-
     steps:
       - checkout
-
       - attach_workspace:
           at: ~/rollinmh-client
-
       - run:
           name: Lint
           command: |
