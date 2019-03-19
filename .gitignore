@@ -15,3 +15,7 @@ elm-stuff/
 # Build output
 build/
 build-dev/
+
+# Test reports
+cypress/screenshots/
+cypress/videos/
