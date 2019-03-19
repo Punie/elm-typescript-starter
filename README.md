@@ -1,6 +1,7 @@
 # RollinMH Client
 
 [![Build Status](https://travis-ci.com/RollinMH/rollinmh-client.svg?branch=master)](https://travis-ci.com/RollinMH/rollinmh-client)
+[![CircleCI](https://circleci.com/gh/RollinMH/rollinmh-client/tree/master.svg?style=svg)](https://circleci.com/gh/RollinMH/rollinmh-client/tree/master)
 
 ## Getting started :rocket:
 
