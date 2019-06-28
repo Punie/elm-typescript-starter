@@ -49,7 +49,7 @@ store n =
 -}
 type Message
     = Tick Int
-    | NoOp
+    | Invalid
 
 
 {-| This is the common application entry point for all values coming from JS.
@@ -101,11 +101,10 @@ dispatch : FromJS -> Message
 dispatch { kind, value } =
     case kind of
         "tick" ->
-            decodeInt value
-                |> Tick
+            Tick (decodeInt value)
 
         _ ->
-            NoOp
+            Invalid
 
 
 decodeInt : Value -> Int

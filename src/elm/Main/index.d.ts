@@ -1,7 +1,7 @@
 /*
   # Elm Type Definitions
 
-  This file is intended to pro vide a type-safe interface between Elm and
+  This file is intended to provide a type-safe interface between Elm and
   Typescript and should be edited with great care and exclusively when one of
   the following modification are made on the Elm side:
   - adding or modifying the signature of ports
@@ -21,7 +21,6 @@
   - `Value`    -> arbitrary `JSON`
 */
 
-
 // INITIALISATION
 
 export namespace Elm {
@@ -33,7 +32,7 @@ export namespace Elm {
 
 /** The Elm application type after initialization. */
 export interface App {
-  ports: Ports;
+  readonly ports: Ports;
 }
 
 /**
@@ -52,11 +51,10 @@ export interface App {
  * `Browser.sandbox` and `Flags` is not an alias for `()`), they **must** be
  * provided on initialization.
  */
-export interface Config {
-  node?: Element | null;
-  flags: Flags;
+export type Config = {
+  readonly node?: Element | null;
+  readonly flags: Flags;
 }
-
 
 // ELM - TS INTEROP
 
@@ -79,9 +77,9 @@ export type Flags = string;
  * Any outgoing port to Elm must also be mapped by a field of the same name
  * with type `Sub<a>` where `a` is the type of the values send to Elm.
  */
-export interface Ports {
-  command: Cmd<Action>;
-  notification: Sub<Message>;
+export type Ports = {
+  readonly command: Cmd<Action>;
+  readonly notification: Sub<Message>;
 }
 
 /** Type of commands coming from Elm to perform on the JS side. */
@@ -91,27 +89,27 @@ export type Action = LogAction | StoreAction;
 export type Message = TickMessage;
 
 /** API for incoming ports from Elm. */
-export interface Cmd<T> {
+export type Cmd<T> = {
   subscribe(callback: (value: T) => void): void;
   unsubscribe(callback: (value: T) => void): void;
 }
 
 /** API for outgoing ports to Elm */
-export interface Sub<T> {
+export type Sub<T> = {
   send(value: T): void;
 }
 
-export interface LogAction {
-  kind: 'log';
-  value: string;
+export type LogAction = {
+  readonly kind: 'log';
+  readonly value: string;
 }
 
-export interface StoreAction {
-  kind: 'store';
-  value: number;
+export type StoreAction = {
+  readonly kind: 'store';
+  readonly value: number;
 }
 
-export interface TickMessage {
-  kind: 'tick';
-  value: number;
+export type TickMessage = {
+  readonly kind: 'tick';
+  readonly value: number;
 }

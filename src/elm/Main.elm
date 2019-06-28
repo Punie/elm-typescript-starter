@@ -2,6 +2,7 @@ module Main exposing (main)
 
 import Browser
 import Html exposing (Html)
+import Html.Attributes
 import Js exposing (Message(..))
 
 
@@ -50,7 +51,7 @@ update msg model =
         Received (Tick n) ->
             ( model, Js.store n )
 
-        Received NoOp ->
+        Received Invalid ->
             ( model, Cmd.none )
 
 
@@ -65,4 +66,7 @@ subscriptions _ =
 
 view : Model -> Html Msg
 view model =
-    Html.text model
+    Html.div
+        [ Html.Attributes.class "main" ]
+        [ Html.text model
+        ]
