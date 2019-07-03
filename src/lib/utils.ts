@@ -9,3 +9,7 @@
 export function assertNever(x: never): never {
   throw new Error(`Unexpected value: ${x}`);
 }
+
+export function sum(...xs: Array<number>): number {
+  return xs.reduce((acc, val) => acc + val, 0);
+}
