@@ -1,12 +1,13 @@
 {
-  "name": "rollinmh-client",
+  "name": "elm-typescript-starter",
   "description": "",
   "version": "1.0.0",
   "license": "BSD-3-Clause",
   "private": true,
   "author": {
-    "name": "RollinMH",
-    "url": "https://github.com/RollinMH"
+    "name": "Hugo Saracino",
+    "email": "hugo.saracino@gmail.com",
+    "url": "https://punie.dev"
   },
   "contributors": [
     {
@@ -20,13 +21,13 @@
       "url": "https://morgane.dev"
     }
   ],
-  "homepage": "https://github.com/RollinMH/rollinmh-client#readme",
+  "homepage": "https://github.com/Punie/elm-typescript-starter#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RollinMH/rollinmh-client.git"
+    "url": "git+https://github.com/Punie/elm-typescript-starter.git"
   },
   "bugs": {
-    "url": "https://github.com/RollinMH/rollinmh-client/issues"
+    "url": "https://github.com/Punie/elm-typescript-starter/issues"
   },
   "scripts": {
     "serve": "parcel src/static/index.html -d build-dev --cache-dir build-dev/.cache --port 1234 --open",

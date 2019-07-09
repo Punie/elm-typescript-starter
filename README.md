@@ -1,6 +1,6 @@
-# RollinMH Client
+# Elm - Typescript - Parcel starter project
 
-[![CircleCI](https://circleci.com/gh/RollinMH/rollinmh-client/tree/master.svg?style=svg)](https://circleci.com/gh/RollinMH/rollinmh-client/tree/master)
+[![CircleCI](https://circleci.com/gh/Punie/elm-typescript-starter/tree/master.svg?style=svg)](https://circleci.com/gh/Punie/elm-typescript-starter/tree/master)
 
 ## Getting started :rocket:
 
@@ -71,12 +71,14 @@ yarn build
 
 The resulting bundle will be placed in a `build` directory at the root of the project.
 
-## Maintainers :busts_in_silhouette:
+## Maintainer :busts_in_silhouette:
 
 [@Punie](https://github.com/Punie) - _Hugo Saracino_
+
+## Contributors
 
 [@DataMorgane](https://github.com/DataMorgane) - _Morgane Flauder_
 
 ## License :page_facing_up:
 
-[BSD-3-Clause](LICENSE) :copyright: Hugo Saracino & Morgane Flauder
+[BSD-3-Clause](LICENSE) :copyright: Hugo Saracino
