@@ -1,7 +1,6 @@
 import { Action, App, Elm, Flags, TickMessage } from '../elm/Main';
 import { assertNever } from './utils';
 
-/** Initialize an Elm application on the provided `node` */
 export function initializeElmApp(node: Element | null, flags: Flags): App {
   return Elm.Main.init({ node, flags });
 }
