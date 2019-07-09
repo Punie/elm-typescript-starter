@@ -3,11 +3,11 @@ jobs:
   build:
     docker:
       - image: circleci/node:11.11.0
-    working_directory: ~/rollinmh-client
+    working_directory: ~/elm-typescript-starter
     steps:
       - checkout
       - attach_workspace:
-          at: ~/rollinmh-client
+          at: ~/elm-typescript-starter
       - restore_cache:
           name: Restore Yarn Package Cache
           keys:
@@ -41,11 +41,11 @@ jobs:
   test:
     docker:
       - image: circleci/node:11.11.0
-    working_directory: ~/rollinmh-client
+    working_directory: ~/elm-typescript-starter
     steps:
       - checkout
       - attach_workspace:
-          at: ~/rollinmh-client
+          at: ~/elm-typescript-starter
       - run:
           name: Test
           command: yarn test
@@ -53,11 +53,11 @@ jobs:
   lint:
     docker:
       - image: circleci/node:11.11.0
-    working_directory: ~/rollinmh-client
+    working_directory: ~/elm-typescript-starter
     steps:
       - checkout
       - attach_workspace:
-          at: ~/rollinmh-client
+          at: ~/elm-typescript-starter
       - run:
           name: Lint
           command: |
