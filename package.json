@@ -51,6 +51,6 @@
     "sass": "^1.22.3",
     "tslint": "^5.18.0",
     "tslint-config-airbnb": "^5.11.1",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.3"
   }
 }
