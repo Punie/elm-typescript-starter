@@ -1,29 +1,29 @@
 /*
-  # Elm Type Definitions
+ * Elm Type Definitions
+ *
+ * This file is intended to provide a type-safe interface between Elm and
+ * Typescript and should be edited with great care and exclusively when one of
+ * the following modification are made on the Elm side:
+ * - adding ports or modifying the signature of existing ones
+ * - modifying the definition of the `Flags` type
+ * - modifying the `Program` type
+ *
+ * Mapping between Elm types and TS types is provided here as a reference:
+ * - `Int`      -> `number`
+ * - `Float`    -> `number`
+ * - `Bool`     -> `boolean`
+ * - `String`   -> `string`
+ * - `Maybe a`  -> `a | null`
+ * - `List a`   -> `Array<a>`
+ * - `Array a`  -> `Array<a>`
+ * - `(a, b)`   -> `[a, b]`     (works for any size of Elm tuples)
+ * - `Records`  -> JS `Object`  (well-typed)
+ * - `Value`    -> arbitrary `JSON`
+ */
 
-  This file is intended to provide a type-safe interface between Elm and
-  Typescript and should be edited with great care and exclusively when one of
-  the following modification are made on the Elm side:
-  - adding or modifying the signature of ports
-  - modifying the definition of the `Flags` type
-  - modifying the `Program` type
-
-  Mapping between Elm types and TS types is provided here as a reference:
-  - `Int`      -> `number`
-  - `Float`    -> `number`
-  - `Bool`     -> `boolean`
-  - `String`   -> `string`
-  - `Maybe a`  -> `a | null`
-  - `List a`   -> `Array<a>`
-  - `Array a`  -> `Array<a>`
-  - `(a, b)`   -> `[a, b]`     (works for any size of Elm tuples)
-  - `Records`  -> JS `Object`  (well-typed)
-  - `Value`    -> arbitrary `JSON`
-*/
-
-// INITIALISATION
-
-export namespace Elm {
+/** Elm runtime entrypoint. */
+ export namespace Elm {
+  /** Elm `Main` module. */
   export namespace Main {
     /** Initialize an Elm `App` with the provided `Config`. */
     export function init(config: Config): App;
@@ -55,8 +55,6 @@ export type Config = {
   readonly node?: Element | null;
   readonly flags: Flags;
 }
-
-// ELM - TS INTEROP
 
 /**
  * A value of type `Flags` is provided to Elm on initialization.
