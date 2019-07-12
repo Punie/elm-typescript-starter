@@ -1,5 +1,5 @@
 port module Js exposing
-    ( log, store
+    ( load, log, store
     , Message(..), receive
     )
 
@@ -8,7 +8,7 @@ port module Js exposing
 
 # To JS
 
-@docs log, store
+@docs load, log, store
 
 
 # From JS
@@ -23,6 +23,14 @@ import Json.Encode as Encode exposing (Value)
 
 
 -- To JS
+
+
+{-| Ask JS to load dynamic libraries
+-}
+load : () -> Cmd msg
+load _ =
+    ToJS "load" Encode.null
+        |> command
 
 
 {-| Ask JS to console.log a String

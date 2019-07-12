@@ -3,6 +3,7 @@ module Main exposing (main)
 import Browser
 import Html exposing (Html)
 import Html.Attributes
+import Html.Events
 import Js exposing (Message(..))
 
 
@@ -49,12 +50,16 @@ init str =
 
 
 type Msg
-    = Received Message
+    = Load
+    | Received Message
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
+        Load ->
+            ( model, Js.load () )
+
         Received (Tick n) ->
             ( model, Js.store n )
 
@@ -74,6 +79,11 @@ subscriptions _ =
 view : Model -> Html Msg
 view model =
     Html.div
-        [ Html.Attributes.class "main" ]
-        [ Html.text model.content
+        [ Html.Attributes.class "elm" ]
+        [ Html.h1
+            []
+            [ Html.text model.content ]
+        , Html.button
+            [ Html.Events.onClick Load ]
+            [ Html.text "Trigger Storage" ]
         ]

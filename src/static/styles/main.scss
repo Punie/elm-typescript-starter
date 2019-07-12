@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
-  font-family: 'Roboto', sans-serif;
   background-color: rgb(40, 44, 52);
-  color: rgb(163, 162, 171);
 }
 
-.main {
-  font-size: 36px;
+.elm {
+  color: rgb(163, 162, 171);
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  background-color: rebeccapurple;
+  border-width: 0;
+  border-radius: 5px;
+  color: cornflowerblue;
+  font-size: 16px;
+  padding: 8px;
 }
