@@ -1,4 +1,4 @@
-import { Action, App, Elm, Flags, TickMessage } from '../elm/Main';
+import { App, Elm, Flags, TickMessage } from '../elm/Main';
 import { assertNever } from './utils';
 
 export function initializeElmApp(node: Element | null, flags: Flags): App {
@@ -6,7 +6,7 @@ export function initializeElmApp(node: Element | null, flags: Flags): App {
 }
 
 export function dispatch(app: App) {
-  return function (action: Action) {
+  app.ports.command.subscribe((action) => {
     switch (action.kind) {
       case 'load':
         return load(app);
@@ -17,7 +17,7 @@ export function dispatch(app: App) {
       default:
         return assertNever(action);
     }
-  };
+  });
 }
 
 export function sendTick(app: App, tick: number): void {
