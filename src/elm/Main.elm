@@ -29,12 +29,19 @@ type alias Flags =
 
 
 type alias Model =
-    String
+    { content : String }
 
 
 init : Flags -> ( Model, Cmd Msg )
 init str =
-    ( str, Js.log "Hello JS from Elm! o/" )
+    let
+        model =
+            { content = str }
+
+        cmd =
+            Js.log "Hello JS from Elm! o/"
+    in
+    ( model, cmd )
 
 
 
@@ -68,5 +75,5 @@ view : Model -> Html Msg
 view model =
     Html.div
         [ Html.Attributes.class "main" ]
-        [ Html.text model
+        [ Html.text model.content
         ]
