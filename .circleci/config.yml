@@ -50,6 +50,24 @@ jobs:
           name: Test
           command: yarn test
 
+  e2e:
+    docker:
+      - image: circleci/node:11.11.0
+    working_directory: ~/elm-typescript-starter
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/elm-typescript-starter
+      - run:
+          name: Install serve
+          command: yarn global add serve
+      - run:
+          name: Serve bundle
+          command: serve build -p 1234
+      - run:
+          name: Test
+          command: yarn e2e
+
   lint:
     docker:
       - image: circleci/node:12.11.1
@@ -71,6 +89,9 @@ workflows:
     jobs:
       - build
       - test:
+          requires:
+            - build
+      - e2e:
           requires:
             - build
       - lint:
