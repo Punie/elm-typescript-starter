@@ -31,6 +31,7 @@
   },
   "scripts": {
     "start": "parcel src/static/index.html -d build-dev --cache-dir build-dev/.cache --port 1234 --open",
+    "serve": "serve build -p 1234",
     "build": "parcel build src/static/index.html -d build --detailed-report --no-source-maps --no-cache --experimental-scope-hoisting",
     "docs": "edp",
     "lint-analyse": "elm-analyse --elm-format-path ./node_modules/.bin/elm-format",
@@ -39,7 +40,7 @@
     "analyse": "elm-analyse --serve --port 8001 --elm-format-path ./node_modules/.bin/elm-format --open",
     "test": "elm-test --compiler ./node_modules/.bin/elm tests/Elm/**/*.elm",
     "tdd": "elm-test --compiler ./node_modules/.bin/elm tests/Elm/**/*.elm --watch",
-    "e2e": "cypress run --record false -r nyan"
+    "e2e": "cypress run --record false"
   },
   "dependencies": {},
   "devDependencies": {

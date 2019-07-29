@@ -23,6 +23,7 @@ jobs:
           name: Save Yarn Package Cache
           key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
+            - ~/.cache/Cypress
             - ~/.cache/yarn
       - run:
           name: Build
@@ -35,6 +36,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
+            - build
             - elm-stuff
             - node_modules
 
@@ -47,25 +49,26 @@ jobs:
       - attach_workspace:
           at: ~/elm-typescript-starter
       - run:
-          name: Test
+          name: Run unit tests
           command: yarn test
 
   e2e:
     docker:
-      - image: circleci/node:11.11.0
+      - image: circleci/node:11.11.0-browsers
     working_directory: ~/elm-typescript-starter
     steps:
       - checkout
       - attach_workspace:
           at: ~/elm-typescript-starter
       - run:
-          name: Install serve
-          command: yarn global add serve
+          name: Install Cypress
+          command: yarn cypress install
       - run:
           name: Serve bundle
-          command: serve build -p 1234
+          command: yarn serve
+          background: true
       - run:
-          name: Test
+          name: Run end-to-end tests
           command: yarn e2e
 
   lint:
