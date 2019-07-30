@@ -20,7 +20,7 @@ That being said, you will at the very least need the following two:
 The easiest way to get started and make sure that you have everything you need is to launch a development server.
 
 ```sh
-yarn serve
+yarn start
 ```
 
 This should build the project in `development` mode and automatically open your web browser at [http://localhost:1234/](http://localhost:1234/). It will also watch your source files for changes and reload the page for you.

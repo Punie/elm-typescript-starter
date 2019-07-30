@@ -30,7 +30,7 @@
     "url": "https://github.com/Punie/elm-typescript-starter/issues"
   },
   "scripts": {
-    "serve": "parcel src/static/index.html -d build-dev --cache-dir build-dev/.cache --port 1234 --open",
+    "start": "parcel src/static/index.html -d build-dev --cache-dir build-dev/.cache --port 1234 --open",
     "build": "parcel build src/static/index.html -d build --detailed-report --no-source-maps --no-cache --experimental-scope-hoisting",
     "docs": "edp",
     "lint-analyse": "elm-analyse --elm-format-path ./node_modules/.bin/elm-format",
