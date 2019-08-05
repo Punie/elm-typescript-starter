@@ -2277,10 +2277,10 @@ elm-format@^0.8.1:
   dependencies:
     binwrap "^0.2.0"
 
-elm-hot@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/elm-hot/-/elm-hot-1.1.0.tgz#6daaf4a3f0bb8fd19306337ba887b7f7c8e5936e"
-  integrity sha512-9vA9qE2IcJGNV5N7Ga3FdNs5GKY81ocBbliD2rxJELHnVW4agH95gbpROSoSd43JL8DRmKIQvZ6sX0h+xztTmA==
+elm-hot@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/elm-hot/-/elm-hot-1.1.1.tgz#5284dcb475b329b1a41f1b41d201041cd05a3b96"
+  integrity sha512-ZHjoHd2Ev6riNXNQirj3J+GKKXXwedAUikfFBYzlVL/+3CdGs96cpZ7nhAk4c5l//Qa9ymltrqX36mOlr0pPFA==
 
 elm-test@^0.19.0-rev6:
   version "0.19.0-rev6"
