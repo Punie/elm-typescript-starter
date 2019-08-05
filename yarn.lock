@@ -1580,12 +1580,7 @@ command-exists@^1.2.6:
   resolved "https://registry.yarnpkg.com/command-exists/-/command-exists-1.2.8.tgz#715acefdd1223b9c9b37110a149c6392c2852291"
   integrity sha512-PM54PkseWbiiD/mMsbvW351/u+dafwTJ0ye2qB60G1aGQP9j3xK2gmMDc+R34L3nDtx4qMCitXT75mkbkGJDLw==
 
-commander@^2.11.0, commander@^2.12.1, commander@^2.19.0, commander@^2.9.0:
-  version "2.19.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.19.0.tgz#f6198aa84e5b83c46054b94ddedbfed5ee9ff12a"
-  integrity sha512-6tvAOO+D6OENvRAh524Dh9jcfKTYDQAqvqezbCW82xj5X0pSrcpxtvRKHLG0yBY6SD7PSDrJaj+0AiOcKVd1Xg==
-
-commander@^2.20.0:
+commander@^2.11.0, commander@^2.12.1, commander@^2.19.0, commander@^2.20.0, commander@^2.9.0:
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
   integrity sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==
@@ -2254,10 +2249,10 @@ elm-analyse@^0.16.4:
     sums "0.2.4"
     ws "3.3.1"
 
-elm-doc-preview@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/elm-doc-preview/-/elm-doc-preview-2.0.4.tgz#1fb2ea9d80ded53d9ded73fe607a8d72d4744cc0"
-  integrity sha512-F6LlYWNs7BVQ9vLRHI6P/FDVf4hpNJPjHuL0sxGwC4KDcPEnjIwOC6jWxiUEC3226aYf/uY60qDDqzFNHgcPQg==
+elm-doc-preview@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/elm-doc-preview/-/elm-doc-preview-2.0.5.tgz#5c3194df221d8a628359b232d7b7e8782c835045"
+  integrity sha512-6vHYvsaTJlKdAVLGLlFfeSr8JX715+Z7JinxCLxJC6bw5F+g7rugkwtfondGH+NZHylxZCkWCmOHVbMdbwVdzw==
   dependencies:
     chalk "^2.4.2"
     commander "^2.20.0"
@@ -5550,7 +5545,7 @@ serialize-to-js@^1.1.1:
     js-beautify "^1.8.9"
     safer-eval "^1.3.0"
 
-serve-static@1.13.2, serve-static@^1.12.4:
+serve-static@1.13.2:
   version "1.13.2"
   resolved "https://registry.yarnpkg.com/serve-static/-/serve-static-1.13.2.tgz#095e8472fd5b46237db50ce486a43f4b86c6cec1"
   integrity sha512-p/tdJrO4U387R9oMjb1oj7qSMaMfmOyd4j9hOFoxZe2baQszgHcSWjuya/CiT5kgZZKRudHNOA0pYXOl8rQ5nw==
@@ -5560,7 +5555,7 @@ serve-static@1.13.2, serve-static@^1.12.4:
     parseurl "~1.3.2"
     send "0.16.2"
 
-serve-static@1.14.1, serve-static@^1.14.1:
+serve-static@1.14.1, serve-static@^1.12.4, serve-static@^1.14.1:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/serve-static/-/serve-static-1.14.1.tgz#666e636dc4f010f7ef29970a88a674320898b2f9"
   integrity sha512-JMrvUwE54emCYWlTI+hGrGv5I8dEwmco/00EvkzIIsR7MqrHonbD9pO2MOfFnpFntl7ecpZs+3mW+XbQZu9QCg==
