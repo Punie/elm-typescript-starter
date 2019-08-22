@@ -2669,10 +2669,10 @@ elm-analyse@^0.16.4:
     sums "0.2.4"
     ws "3.3.1"
 
-elm-doc-preview@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/elm-doc-preview/-/elm-doc-preview-3.0.0.tgz#3ab804f075ce459bd6957110bb4a2babd5fc6a84"
-  integrity sha512-8z7UFkXRx18PcQYGz4BcKgjeYwr24RFz5stTRTN9qIizkYsdFga3jcs4QaBU1rnSCDWMAx7A5JEphsRjEeVvdQ==
+elm-doc-preview@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/elm-doc-preview/-/elm-doc-preview-3.0.1.tgz#b085598fe810b7e4ae0d680ba3d601c69940e75a"
+  integrity sha512-NpAgEKNiYkQE932gMjFGC/BpcmUD9ohhrbSnGSoQBsC+VPRKCiGdmLJUiql/aPC2eXYIlWQJ5YJ5rFWI0iovbw==
   dependencies:
     chalk "^2.4.2"
     commander "^3.0.0"
