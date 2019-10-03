@@ -1,0 +1,14 @@
+{
+  "extends": ["airbnb-base"],
+  "plugins": ["@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "import/no-unresolved": 0,
+    "import/prefer-default-export": 0,
+    "no-unused-vars": "off",
+    "object-curly-newline": "off"
+  }
+}

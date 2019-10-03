@@ -22,7 +22,7 @@
  */
 
 /** Elm runtime entrypoint. */
- export namespace Elm {
+export namespace Elm {
   /** Elm `Main` module. */
   export namespace Main {
     /** Initialize an Elm `App` with the provided `Config`. */
