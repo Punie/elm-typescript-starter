@@ -5,6 +5,14 @@ export function initializeElmApp(node: Element | null, flags: Flags): App {
   return Elm.Main.init({ node, flags });
 }
 
+function log(value: string) {
+  console.log(value);
+}
+
+function store(value: number) {
+  console.log(`Storing value: ${value}`);
+}
+
 export function dispatch(action: Action) {
   switch (action.kind) {
     case 'log':
@@ -23,12 +31,4 @@ export function sendTick(app: App, tick: number) {
   };
 
   app.ports.notification.send(tickMsg);
-}
-
-function log(value: string) {
-  console.log(value);
-}
-
-function store(value: number) {
-  console.log(`Storing value: ${value}`);
 }
