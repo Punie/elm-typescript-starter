@@ -5,15 +5,15 @@ export function initializeElmApp(node: Element | null, flags: Flags): App {
   return Elm.Main.init({ node, flags });
 }
 
-function log(value: string) {
+function log(value: string): void {
   console.log(value);
 }
 
-function store(value: number) {
+function store(value: number): void {
   console.log(`Storing value: ${value}`);
 }
 
-export function dispatch(action: Action) {
+export function dispatch(action: Action): void {
   switch (action.kind) {
     case 'log':
       return log(action.value);
@@ -24,7 +24,7 @@ export function dispatch(action: Action) {
   }
 }
 
-export function sendTick(app: App, tick: number) {
+export function sendTick(app: App, tick: number): void {
   const tickMsg: TickMessage = {
     kind: 'tick',
     value: tick,
