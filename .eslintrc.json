@@ -11,6 +11,13 @@
     "browser": true
   },
   "rules": {
+    "arrow-parens": [
+      2,
+      "as-needed",
+      {
+        "requireForBlockBody": true
+      }
+    ],
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
     "object-curly-newline": "off",
