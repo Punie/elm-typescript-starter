@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:11.11.0
+      - image: circleci/node:12.11.1
     working_directory: ~/elm-typescript-starter
     steps:
       - checkout
@@ -40,7 +40,7 @@ jobs:
 
   test:
     docker:
-      - image: circleci/node:11.11.0
+      - image: circleci/node:12.11.1
     working_directory: ~/elm-typescript-starter
     steps:
       - checkout
@@ -52,7 +52,7 @@ jobs:
 
   lint:
     docker:
-      - image: circleci/node:11.11.0
+      - image: circleci/node:12.11.1
     working_directory: ~/elm-typescript-starter
     steps:
       - checkout
