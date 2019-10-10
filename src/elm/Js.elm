@@ -3,7 +3,12 @@ port module Js exposing
     , Message(..), receive
     )
 
-{-|
+{-| This module is intended to be the sole repository for communication between
+elm and javascript.
+
+It provides high level commands to send well typed messages to javascript and a
+`Message` type representing all the kinds of values javascript might send
+through the `receive` subscription.
 
 
 # To JS

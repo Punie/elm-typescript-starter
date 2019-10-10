@@ -2735,10 +2735,9 @@ elm-analyse@^0.16.4:
     sums "0.2.4"
     ws "3.3.1"
 
-elm-doc-preview@^3.0.1:
+elm-doc-preview@Punie/elm-doc-preview#fix-source-directories:
   version "3.0.1"
-  resolved "https://registry.yarnpkg.com/elm-doc-preview/-/elm-doc-preview-3.0.1.tgz#b085598fe810b7e4ae0d680ba3d601c69940e75a"
-  integrity sha512-NpAgEKNiYkQE932gMjFGC/BpcmUD9ohhrbSnGSoQBsC+VPRKCiGdmLJUiql/aPC2eXYIlWQJ5YJ5rFWI0iovbw==
+  resolved "https://codeload.github.com/Punie/elm-doc-preview/tar.gz/10e26f7cd33f2dc25443554b6b72474f9c0e36f8"
   dependencies:
     chalk "^2.4.2"
     commander "^3.0.0"

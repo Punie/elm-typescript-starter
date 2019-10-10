@@ -1,0 +1,8 @@
+{
+    "name": "Punie/elm-typescript-starter",
+    "summary": "",
+    "version": "1.0.0",
+    "exposed-modules": [
+        "Js"
+    ]
+}

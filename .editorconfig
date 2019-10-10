@@ -11,6 +11,6 @@ trim_trailing_whitespace = true
 [*.elm]
 indent_size = 4
 
-[elm.json]
+[{elm,elm-application}.json]
 indent_size = 4
 insert_final_newline = false
