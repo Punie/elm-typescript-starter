@@ -1,7 +1,8 @@
 {
   "extends": [
     "airbnb-base",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:cypress/recommended"
   ],
   "plugins": [
     "@typescript-eslint"

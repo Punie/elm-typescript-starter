@@ -1,5 +1,4 @@
 describe('First test', () => {
-
   it('Does not do much!', () => {
     expect(true).to.eq(true);
   });
@@ -9,5 +8,4 @@ describe('First test', () => {
 
     cy.contains('Hello world! o/');
   });
-
 });
