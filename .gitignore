@@ -15,3 +15,6 @@ elm-stuff/
 # Build output
 build/
 build-dev/
+
+# Coverage reports
+coverage/
