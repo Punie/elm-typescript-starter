@@ -10,6 +10,10 @@ export function assertNever(x: never): never {
   throw new Error(`Unexpected value: ${x}`);
 }
 
-export function sum(...xs: Array<number>): number {
+export function sum(...xs: ReadonlyArray<number>): number {
   return xs.reduce((acc, val) => acc + val, 0);
+}
+
+export function product(...xs: ReadonlyArray<number>): number {
+  return xs.reduce((acc, val) => acc * val, 1);
 }
