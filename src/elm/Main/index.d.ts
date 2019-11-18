@@ -52,7 +52,7 @@ export interface App {
  * provided on initialization.
  */
 export type Config = {
-  readonly node?: Element | null;
+  readonly node?: Element;
   readonly flags: Flags;
 }
 

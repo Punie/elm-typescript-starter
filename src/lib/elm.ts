@@ -2,6 +2,10 @@ import { Action, App, Elm, Flags, TickMessage } from '../elm/Main';
 import { assertNever } from './utils';
 
 export function initializeElmApp(node: Element | null, flags: Flags): App {
+  if (!node) {
+    console.error('The node on which to mount the application was not found.');
+    throw new Error();
+  }
   return Elm.Main.init({ node, flags });
 }
 
