@@ -2737,10 +2737,10 @@ elm-format@^0.8.2:
   dependencies:
     binwrap "^0.2.2"
 
-elm-hot@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/elm-hot/-/elm-hot-1.1.2.tgz#306da61ba97c12518957bacb87473f364b0e2509"
-  integrity sha512-rz0xMz71NTkDMPMepelg67kvs/5CnrE2dDzJJC0TpSgyEU/mjdUL8x1qewJGzTGXwHyg3Trt1CHPiTR9nImmJA==
+elm-hot@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/elm-hot/-/elm-hot-1.1.4.tgz#4984592b3554670255ea4e08f4e98aa9103ab51f"
+  integrity sha512-qPDP/o/Fkifriaxaf3E7hHFB5L6Ijihyg8is4A6xna6/h/zebUiNssbQrxywI2oxNUkr6W/leEu/WlIC1tmVnw==
 
 elm-test@^0.19.1:
   version "0.19.1"
