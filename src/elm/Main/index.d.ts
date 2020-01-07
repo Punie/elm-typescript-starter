@@ -81,7 +81,7 @@ export type Ports = {
 }
 
 /** Type of commands coming from Elm to perform on the JS side. */
-export type Action = LogAction | StoreAction;
+export type Action = LoadAction | LogAction | StoreAction;
 
 /** Type of messages to send from JS to notify the Elm side. */
 export type Message = TickMessage;
@@ -95,6 +95,11 @@ export type Cmd<T> = {
 /** API for outgoing ports to Elm */
 export type Sub<T> = {
   send(value: T): void;
+}
+
+export type LoadAction = {
+  readonly kind: 'load';
+  readonly value: null;
 }
 
 export type LogAction = {
