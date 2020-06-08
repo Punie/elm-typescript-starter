@@ -52,7 +52,7 @@
     "elm-test": "^0.19.1",
     "eslint": "6.5.1",
     "eslint-config-airbnb-base": "14.0.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import": "^2.21.1",
     "parcel": "^1.12.4",
     "sass": "^1.23.1",
     "typescript": "^3.6.4"
