@@ -48,7 +48,7 @@
     "elm-analyse": "^0.16.4",
     "elm-doc-preview": "Punie/elm-doc-preview#fix-source-directories",
     "elm-format": "^0.8.2",
-    "elm-hot": "^1.1.2",
+    "elm-hot": "^1.1.5",
     "elm-test": "^0.19.1",
     "eslint": "6.5.1",
     "eslint-config-airbnb-base": "14.0.0",
