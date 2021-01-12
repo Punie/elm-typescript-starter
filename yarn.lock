@@ -7314,10 +7314,10 @@ sane@^4.1.0:
     minimist "^1.1.1"
     walker "~1.0.5"
 
-sass@^1.23.1:
-  version "1.23.1"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.23.1.tgz#0e5b72ba2bd9f0229a637d33f8dd5bf2d810beb3"
-  integrity sha512-zQzJ3UETUWOMd/pJJGH/zvRsBVO97m11RcpfUhcQUHEXf0yHUBgOIE/Nw8aK0m1XyVJPeq228iIK7gVxsJ/Puw==
+sass@^1.32.3:
+  version "1.32.3"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.32.3.tgz#045755b8b4e2d924408c897bcf24f873defc66ee"
+  integrity sha512-iJ+rkT0f00GCo/yO8gskzC/12QDdtwyZGFip4nRt3MstRetldRB7/k8gs55Zm5tfhuNDYfHjR5CyWLc8kE8gYg==
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
